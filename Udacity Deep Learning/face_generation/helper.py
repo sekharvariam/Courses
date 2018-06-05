@@ -94,6 +94,7 @@ def get_batch(image_files, width, height, mode):
     return data_batch
 
 
+
 def images_square_grid(images, mode):
     """
     Save images as a square grid
@@ -106,7 +107,7 @@ def images_square_grid(images, mode):
 
     # Scale to 0-255
     images = (((images - images.min()) * 255) / (images.max() - images.min())).astype(np.uint8)
-
+    
     # Put images in a square arrangement
     images_in_square = np.reshape(
             images[:save_size*save_size],
